@@ -18,9 +18,6 @@ time123 = timeSlot.find(isLargeNumber);
 console.log(time123);
 
 //for loop for time check
-for (i = 0; i < timeSlot.length; i++) {
-    
-}
 
 //WHEN I click into a time block
 //THEN I can enter an event
