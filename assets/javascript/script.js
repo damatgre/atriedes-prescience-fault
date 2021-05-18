@@ -24,13 +24,9 @@ $(".time-block").each(function(){
     }
 });
 
-//testing to find index that matches time
-
-
-//for loop for time check
-
 //WHEN I click into a time block
 //THEN I can enter an event
+
 
 
 //WHEN I click the save button for that time block
