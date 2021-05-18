@@ -1,21 +1,31 @@
 //current date displayed
-var now = JSON.stringify(moment().format("dddd MMMM, YYYY"));
+var now = JSON.stringify(moment().format("MMM Do YY"));
 $("#currentDay").append(now);
 
 //WHEN I scroll down
 //THEN I am presented with time blocks for standard business hours
-var time = JSON.stringify(moment().format("HH"));
+var time = parseInt(moment().format("HH"));
 
 //WHEN I view the time blocks for that day
 //THEN each time block is color-coded to indicate whether it is in the past, present, or future
-const timeSlot =["09", "10", "11", "12", "13", "14", "15", "16", "17"];
 
-const isLargeNumber = (element) => element = time;
+$(".time-block").each(function(){
+    var timeId = parseInt($(this)
+        .attr("id")
+        .split("-")[1]
+    );
+
+    if (timeId < time){
+        $(this).find('input').addClass('past');
+    } else if (timeId === time) {
+        $(this).find('input').addClass('present');
+    } else {
+        $(this).find('input').addClass('future');
+    }
+});
 
 //testing to find index that matches time
-time123 = timeSlot.find(isLargeNumber);
 
-console.log(time123);
 
 //for loop for time check
 
