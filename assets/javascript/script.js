@@ -1,5 +1,5 @@
 //current date displayed
-var now = JSON.stringify(moment().format("MMM Do YY"));
+var now = JSON.stringify(moment().format('MMMM Do YYYY'));
 $("#currentDay").append(now);
 
 //WHEN I scroll down
